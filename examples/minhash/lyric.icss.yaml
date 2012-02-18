@@ -1,0 +1,29 @@
+--- 
+#
+# ICSS Schema for the culture.audio_object type from the [infochimps api](http://infochimps.com)
+#
+:protocol:              typedefs
+:namespace:             icss.core
+:doc:                   ICSS core type definition for audio_object
+:types:                 
+  - :name:              culture.audio_object
+    :type:              record
+    :is_a:              
+      - culture.media_object
+      - culture.creative_work
+    :doc:               An audio file.
+    
+    :fields:            []
+
+
+
+#
+# This is an ICSS (Infochimps Stupid Schema) schema: a pragmatic, expressive
+# description of a dataset and all associated assets. ICSS draws heavily on work
+# by [Schema.org](http://schema.org/) and [Avro](http://avro.apache.org/). Learn
+# more at http://infochimps.com/
+#
+# This schema (the contents of the file, not the data it describes) is available
+# under the [CC-BY-SA-3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+# (Creative Commons Attribution-ShareAlike License version 3.0).
+#
