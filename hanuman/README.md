@@ -1,15 +1,13 @@
-
-
-
-Dataflow operations
+## Dataflow operations
 
 * **load, source**
 
 * **store, sink**
   - **dump** is a console sink
-
+  
 * **push**
 * **pull**
+  - **query**
 
 * **buffer**
 * **throttle**
@@ -30,19 +28,21 @@ __________________________________________________________________________
   - **flatten**
   - **subgroup, subsort**
 
+  - **decorate** (hash or fragment-replicate join) -- hang data from a hash on each record
+
   - **delay**
   - **trigger**
 
 * **filter**
   - **sample**
 
-  - **decorate** (hash or fragment-replicate join) -- hang data from a hash on each record
-
-* **window, limit**
+* **limit, window**
 
 __________________________________________________________________________
 
 ### Guarantees
+
+* **partition**
 
 * **sort**
   - **distinct**
@@ -54,9 +54,23 @@ __________________________________________________________________________
 
 __________________________________________________________________________
 
+### Coordination
+
+* **counters**
+* **locks**
+* **registers**
+
+* **announce/discover**
+
+__________________________________________________________________________
+
 ### Meta
 
+* **barrier**
+
 * **schedule**
+
+* idempotency control
 
 * **stop/start/sleep**
   - **close**
@@ -137,4 +151,8 @@ __________________________________________________________________________
 
 * [Infopipes: An abstraction for multimedia streamin](http://web.cecs.pdx.edu/~black/publications/Mms062%203rd%20try.pdf) Black et al 2002
 
-*
+* [StreamSQL Event Processing with Esper](http://www.igvita.com/2011/05/27/streamsql-event-processing-with-esper/)
+* [Esper EPL Reference](http://esper.codehaus.org/esper-4.5.0/doc/reference/en/html_single/index.html#epl_clauses)
+
+
+* [Yahoo Pipes]() - [Yahoo Pipes wikipedia page](http://en.wikipedia.org/wiki/Yahoo_Pipes)
