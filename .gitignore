@@ -1,0 +1,47 @@
+
+
+
+
+
+
+## COMPILED
+## EDITORS
+## OS
+## OTHER SCM
+## PROJECT::GENERAL
+## PROJECT::SPECIFIC
+*.log
+*.o
+*.pyc
+*.rdb
+*.so
+*.swp
+*.tmproj
+*_flymake
+*_flymake.*
+*private*
+*~
+.DS_Store
+.\#*
+.bak
+.bzr
+.hg
+.project
+.settings
+.svn
+.yardoc
+/.rbenv-version
+Gemfile.lock
+Icon?
+REVISION
+TAGS*
+\#*
+a.out
+coverage
+doc
+nohup.out
+pkg
+rdoc
+tmp/*
+tmtags
+notes/*
