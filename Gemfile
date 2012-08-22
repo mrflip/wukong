@@ -6,6 +6,7 @@ gem   'gorillib',    ">= 0.4",  :github => 'infochimps-labs/gorillib', :branch =
 gem   'multi_json',  ">= 1.1"
 
 gem   'extlib'
+gem   'right_aws'
 gem   'addressable'
 gem   'htmlentities'
 gem   'home_run',               :platform => [:ruby], :require=>'date'

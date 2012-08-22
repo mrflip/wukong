@@ -260,4 +260,5 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<htmlentities>, [">= 0"])
   s.add_dependency(%q<home_run>, [">= 0"])
   s.add_dependency(%q<extlib>, [">= 0"])
+  s.add_dependency(%q<right_aws>, [">= 0"])
 end
