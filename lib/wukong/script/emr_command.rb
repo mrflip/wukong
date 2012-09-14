@@ -70,6 +70,7 @@ module Wukong
         "--mapper=#{mapper_s3_uri} ",
         "--reducer=#{reducer_s3_uri} ",
         "--input=#{input_paths.join(",")} --output=#{output_path}",
+        "--region us-west-2"
       ]
       # eg to specify zero reducers:
       # Settings[:emr_extra_args] = "--arg '-D mapred.reduce.tasks=0'"
