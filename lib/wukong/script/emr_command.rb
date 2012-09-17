@@ -9,6 +9,7 @@ Settings.define :secret_access_key,    :description => 'AWS Secret Access key', 
 Settings.define :emr_runner,           :description => 'Path to the elastic-mapreduce command (~ etc will be expanded)'
 Settings.define :emr_root,             :description => 'S3 bucket and path to use as the base for Elastic MapReduce storage, organized by job name'
 Settings.define :emr_data_root,        :description => 'Optional '
+Settings.define :emr_region,           :description => 'Optional. Which EMR region to run the job. Defaults to US East (Virginia)'
 Settings.define :emr_bootstrap_script, :description => 'Bootstrap actions for Elastic Map Reduce machine provisioning', :default => EMR_CONFIG_DIR+'/emr_bootstrap.sh', :type => :filename, :finally => lambda{ Settings.emr_bootstrap_script = File.expand_path(Settings.emr_bootstrap_script) }
 Settings.define :emr_extra_args,       :description => 'kludge: allows you to stuff extra args into the elastic-mapreduce invocation', :wukong => true
 Settings.define :alive,                :description => 'Whether to keep machine running after job invocation', :type => :boolean
@@ -69,11 +70,11 @@ module Wukong
         "--stream",
         "--mapper=#{mapper_s3_uri} ",
         "--reducer=#{reducer_s3_uri} ",
-        "--input=#{input_paths.join(",")} --output=#{output_path}",
-        "--region us-west-2"
+        "--input=#{input_paths.join(",")} --output=#{output_path}"
       ]
       # eg to specify zero reducers:
       # Settings[:emr_extra_args] = "--arg '-D mapred.reduce.tasks=0'"
+      command_args << "--region #{Settings[:emr_region]}" unless Settings[:emr_region].blank?
       command_args << Settings[:emr_extra_args] unless Settings[:emr_extra_args].blank?
       command_args += hadoop_options_for_emr_runner
       Log.info 'Follow along at http://localhost:9000/job'
