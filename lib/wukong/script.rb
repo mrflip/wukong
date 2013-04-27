@@ -161,9 +161,9 @@ module Wukong
     def run_mode
       case
       when options[:map]           then 'map'
-      # when options[:reduce]        then 'reduce'
+      when options[:reduce]        then 'reduce'
       when ($0 =~ /-mapper\.rb$/)  then 'map'
-      # when ($0 =~ /-reducer\.rb$/) then 'reduce'
+      when ($0 =~ /-reducer\.rb$/) then 'reduce'
       when (options[:run] == true) then options[:default_run_mode]
       else                         options[:run].to_s
       end
