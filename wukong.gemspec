@@ -152,13 +152,10 @@ Gem::Specification.new do |s|
     "examples/pagerank/run_pagerank.sh",
     "examples/sample_records.rb",
     "examples/server_logs/apache_log_parser.rb",
-    "examples/server_logs/breadcrumb_edges.rb",
     "examples/server_logs/breadcrumbs.rb",
-    "examples/server_logs/histograms.rb",
     "examples/server_logs/logline.rb",
     "examples/server_logs/nook.rb",
     "examples/server_logs/nook/faraday_dummy_adapter.rb",
-    "examples/server_logs/page_counts.pig",
     "examples/server_logs/user_agent.rb",
     "examples/simple_word_count.rb",
     "examples/size.rb",
@@ -241,18 +238,10 @@ Gem::Specification.new do |s|
     "lib/wukong/streamer/summing_reducer.rb",
     "lib/wukong/streamer/uniq_by_last_reducer.rb",
     "lib/wukong/typed_struct.rb",
-    "notes/away/icss/icss_specification.textile",
-    "notes/away/swineherd/swineherd-old-readme.textile",
-    "notes/away/wukong-fs/wukong-fs-old-readme.textile",
-    "notes/away/wukong-transform/wukong-processor-old-readme.textile",
     "old/cassandra_streaming/berlitz_for_cassandra.textile",
     "old/cassandra_streaming/client_interface_notes.textile",
     "old/cassandra_streaming/client_schema.textile",
     "old/cassandra_streaming/tuning.textile",
-    "spec/data/a_atsigns_b.tsv",
-    "spec/data/a_follows_b.tsv",
-    "spec/data/tweet.tsv",
-    "spec/data/twitter_user.tsv",
     "spec/spec.opts",
     "spec/spec_helper.rb",
     "spec/wukong/encoding_spec.rb",
@@ -270,4 +259,6 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<addressable>, [">= 0"])
   s.add_dependency(%q<htmlentities>, [">= 0"])
   s.add_dependency(%q<home_run>, [">= 0"])
+  s.add_dependency(%q<extlib>, [">= 0"])
+  s.add_dependency(%q<right_aws>, [">= 0"])
 end
